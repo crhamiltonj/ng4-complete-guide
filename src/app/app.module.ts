@@ -1,33 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ShoppingListComponent } from './component/shoppinglist/shopping-list/shopping-list.component';
-import { ShoppingListEditComponent } from './component/shoppinglist/shopping-list-edit/shopping-list-edit.component';
-import { RecipeListComponent } from './component/recipebook/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './component/recipebook/recipe-item/recipe-item.component';
-import { RecipeDetailComponent } from './component/recipebook/recipe-detail/recipe-detail.component';
-import { RecipesComponent } from './component/recipebook/recipes/recipes.component';
-import { ShoppingListItemComponent } from './component/shoppinglist/shopping-list-item/shopping-list-item.component';
-
+import { AppComponent } from "./app.component";
+import { ServerComponent } from "./server/server.component";
+import { ServersComponent } from "./servers/servers.component";
+import { WarningAlertComponent } from "./warning-alert/warning-alert.component";
+import { SuccessAlertComponent } from './success-alert/success-alert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    ShoppingListComponent,
-    ShoppingListEditComponent,
-    RecipeListComponent,
-    RecipeItemComponent,
-    RecipeDetailComponent,
-    RecipesComponent,
-    ShoppingListItemComponent
+    ServerComponent,
+    ServersComponent,
+    WarningAlertComponent,
+    SuccessAlertComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, FormsModule, HttpModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
